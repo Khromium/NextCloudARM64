@@ -4,13 +4,14 @@ services:
     nextcloud:
         depends_on:
             - db
-        build: "./nextcloud"
+        build:
+            context: "./nextcloud"
+            args:
+                domain: "your.domain.com"
         extra_hosts:
             - "your.domain.com:172.18.0.2"
         ports:
             - "80:80"
-        args:
-            domain: "your.domain.com"
         environment:
             MYSQL_USER: root
             MYSQL_PASSWORD: foo
