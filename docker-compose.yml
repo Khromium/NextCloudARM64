@@ -8,7 +8,9 @@ services:
         extra_hosts:
             - "your.domain.com:172.18.0.2"
         ports:
-            - "8080:80"
+            - "80:80"
+        args:
+            domain: "your.domain.com"
         environment:
             MYSQL_USER: root
             MYSQL_PASSWORD: foo
