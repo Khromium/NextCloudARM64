@@ -26,4 +26,4 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: foo
         volumes:
-            - "./data/maria:/config/databases"
+            - "./data/maria:/var/lib/mysql"
